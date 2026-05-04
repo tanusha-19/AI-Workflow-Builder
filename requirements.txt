@@ -1,4 +1,4 @@
-fastapi
-uvicorn
+streamlit
+streamlit-mermaid
+google-generativeai
 python-dotenv
-openai
