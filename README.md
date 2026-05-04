@@ -13,10 +13,60 @@ An AI-powered logic architect that transforms text into professional, stylized w
 *   🎨 **Premium Dark UI** — Sleek Glassmorphism design with a modern SaaS aesthetic.
 *   ↔️ **Dual Orientation** — Switch between Horizontal and Vertical layouts.
 
-## 🚀 Getting Started
-1. **Clone the repo:** `git clone https://github.com/tanusha-19/AI-Workflow-Builder.git`
-2. **Install:** `pip install -r requirements.txt`
-3. **Run:** `streamlit run app.py`
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology | Purpose |
+| :--- | :--- | :--- |
+| **Frontend** | **Streamlit** | Turning Python scripts into an interactive web interface. |
+| **Styling** | **CSS3 / HTML5** | Custom Glassmorphism UI and SaaS aesthetic. |
+| **Core Logic** | **Python 3** | String parsing and automated shape categorization. |
+| **Visualization** | **Mermaid.js** | JavaScript-based diagramming and charting tool. |
 
 ---
-Built by [Tanusha Sahu](https://linkedin.com/in/your-profile)
+
+## 📁 Project Structure
+
+```text
+AI-Workflow-Builder/
+├── app.py              # Main application logic & Streamlit entry point.
+├── style.py            # Modular CSS definitions for the Professional UI.
+├── requirements.txt    # List of external libraries required for execution.
+├── .gitignore          # Rules for Git to ignore sensitive/cache files.
+├── README.md           # Technical documentation and project overview.
+└── workflow_log.txt    # Local storage for generated workflow history.
+
+
+## 🚀 Getting Started
+
+### Prerequisites
+*   **Python 3.9+**: The core runtime environment.
+*   **Pip**: Python package manager for dependency installation.
+
+### Installation
+```bash
+# 1. Clone the repository
+git clone [https://github.com/tanusha-19/AI-Workflow-Builder.git](https://github.com/tanusha-19/AI-Workflow-Builder.git)
+
+# 2. Navigate into the project directory
+cd AI-Workflow-Builder
+
+# 3. Install the required libraries
+pip install -r requirements.txt
+
+## Run
+# Start the Streamlit server
+streamlit run app.py
+
+## 🔒 Security & Best Practices
+
+*   **Environment Isolation**: Uses a `.gitignore` file to ensure that local configuration files (like `.env`) are never pushed to the public repository.
+*   **Input Sanitization**: The logic cleans and formats user text (replacing `/` with `<br/>`) to prevent diagram breakage.
+*   **Modular Architecture**: By separating the CSS (`style.py`) from the logic (`app.py`), the project follows the **Single Responsibility Principle (SRP)**.
+*   **Local Logic Fallback**: The system is designed to work locally without requiring heavy cloud dependencies, ensuring data privacy for the user's logic.
+
+---
+
+## 👤 Author
+**Tanusha Sahu**  
