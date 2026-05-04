@@ -1,35 +1,30 @@
 import os
+import time
 from dotenv import load_dotenv
-from genai import Client
+from google import genai
 
 load_dotenv()
+api_key = os.getenv("GEMINI_API_KEY")
 
-# Setup the new AI Client
-client = Client(api_key=os.getenv("GEMINI_API_KEY"))
+if not api_key:
+    print("Error: No API Key found in .env")
+else:
+    client = genai.Client(api_key=api_key)
 
-def create_workflow_plan(user_input):
-    prompt = f"""
-    You are an AI Workflow Architect. 
-    Convert this user request into a structured JSON list of steps.
-    Request: "{user_input}"
-    
-    Each step must have: 'step_number', 'action', and 'tool'.
-    Output ONLY the JSON list.
-    """
-    
-    # Using the latest model: gemini-2.0-flash
-    response = client.models.generate_content(
-        model="gemini-1.5-flash", 
-        contents=prompt
-    )
-    return response.text
+    def create_workflow_plan(user_input):
+        # We use 'gemini-1.5-flash' - this is the most common free model
+        try:
+            response = client.models.generate_content(
+                model="gemini-2.0-flash", 
+                contents=f"Return a JSON list of steps for: {user_input}"
+            )
+            return response.text
+        except Exception as e:
+            if "429" in str(e):
+                return "QUOTA_ERROR: Waiting for server reset..."
+            return f"Error: {e}"
 
-if __name__ == "__main__":
-    user_request = "Watch my GitHub for new stars and send a thank you message on Slack"
-    print("Asking Gemini 2.0 to build a plan...")
-    try:
-        result = create_workflow_plan(user_request)
-        print("\nGenerated Workflow:")
+    if __name__ == "__main__":
+        print("Connecting to AI...")
+        result = create_workflow_plan("Summarize my emails")
         print(result)
-    except Exception as e:
-        print(f"Error: {e}")
