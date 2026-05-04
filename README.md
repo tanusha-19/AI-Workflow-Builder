@@ -36,28 +36,34 @@ AI-Workflow-Builder/
 ├── .gitignore          # Rules for Git to ignore sensitive/cache files.
 ├── README.md           # Technical documentation and project overview.
 └── workflow_log.txt    # Local storage for generated workflow history.
-
+---
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-*   **Python 3.9+**: The core runtime environment.
-*   **Pip**: Python package manager for dependency installation.
+
+* **Python** v3.9 or higher
+* **Streamlit** for the web interface
 
 ### Installation
+
 ```bash
 # 1. Clone the repository
 git clone [https://github.com/tanusha-19/AI-Workflow-Builder.git](https://github.com/tanusha-19/AI-Workflow-Builder.git)
-
-# 2. Navigate into the project directory
 cd AI-Workflow-Builder
 
-# 3. Install the required libraries
+# 2. Install dependencies
 pip install -r requirements.txt
 
+# 3. Set up your environment variables
+# Create a .env file in the root directory
+ ```
+
 ## Run
-# Start the Streamlit server
+```# Start the Streamlit server
 streamlit run app.py
+```
+---
 
 ## 🔒 Security & Best Practices
 
@@ -68,5 +74,5 @@ streamlit run app.py
 
 ---
 
-## 👤 Author
+## 🛠️ Built with ❤️ by <u>Tanusha Sahu</u>
 **Tanusha Sahu**  
