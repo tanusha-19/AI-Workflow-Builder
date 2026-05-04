@@ -28,7 +28,6 @@ An AI-powered logic architect that transforms text into professional, stylized w
 
 ## 📁 Project Structure
 
-```text
 AI-Workflow-Builder/
 ├── app.py              # Main application logic & Streamlit entry point.
 ├── style.py            # Modular CSS definitions for the Professional UI.
@@ -74,5 +73,4 @@ streamlit run app.py
 
 ---
 
-## 🛠️ Built with ❤️ by <u>Tanusha Sahu</u>
 **Tanusha Sahu**  
