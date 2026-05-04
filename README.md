@@ -75,4 +75,4 @@ streamlit run app.py
 
 ---
 
-** Build by <u>Tanusha Sahu</u>**  
+** Build by <u> Tanusha Sahu </u>**  
