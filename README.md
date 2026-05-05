@@ -73,6 +73,4 @@ streamlit run app.py
 *   **Modular Architecture**: By separating the CSS (`style.py`) from the logic (`app.py`), the project follows the **Single Responsibility Principle (SRP)**.
 *   **Local Logic Fallback**: The system is designed to work locally without requiring heavy cloud dependencies, ensuring data privacy for the user's logic.
 
----
-
-** Build by <u> Tanusha Sahu </u>**  
+--- 
